@@ -1,0 +1,165 @@
+Activity-1
+man command:
+1)ls -a:
+description:
+do not ignore entries starting with .
+output:
+raakin@ubuntu-25:~$ ls -a
+.              .bashrc  Documents  Music     Public                     Templates                                 .vboxclient-hostversion-tty2-control.pid     Videos
+..             .cache   Downloads  newc      snap                       .vboxclient-clipboard-tty2-control.pid    .vboxclient-seamless-tty2-control.pid        .viminfo
+.bash_history  .config  linx       Pictures  .ssh                       .vboxclient-clipboard-tty2-service.pid    .vboxclient-vmsvga-session-tty2-control.pid
+.bash_logout   Desktop  .local     .profile  .sudo_as_admin_successful  .vboxclient-draganddrop-tty2-control.pid  .vboxclient-vmsvga-session-tty2-service.pid
+remark:
+Lists all files and directories, including hidden ones (those starting with a dot).
+
+-----------------------------------------------------------------
+2)ls -b:
+description:
+print C-style escapes for nongraphic characters
+output:
+raakin@ubuntu-25:~$ ls -b
+Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
+remark:
+Prints C-style escapes for non-graphic characters in filenames .
+
+---------------------------------------------------------------
+3) ls -c:
+description:
+with -lt: sort by, and show, ctime (time of last change of file status information); with -l: show ctime and sort by name; otherwise: sort by ctime, newest first
+output:
+raakin@ubuntu-25:~$ ls -c
+snap  newc  Downloads  Pictures  linx  Documents  Music  Public  Videos  Templates  Desktop
+remark:
+When combined with the -t flag, it sorts files by their status change time (ctime) instead of their modification time.
+
+---------------------------------------------------------------
+4)ls -d:
+description:
+-d, --directory
+              list directories themselves, not their contents
+output:
+raakin@ubuntu-25:~$ ls -d
+.
+remark:
+Lists directories themselves rather than their contents.
+
+---------------------------------------------------------------
+5)ls -f:
+description:
+ -f     do not sort, enable -aU, disable -ls --color
+output:
+raakin@ubuntu-25:~$ ls -f
+.vboxclient-vmsvga-session-tty2-control.pid  .vboxclient-vmsvga-session-tty2-service.pid  snap	     .profile				       .ssh
+Documents				     ..						  Downloads  .sudo_as_admin_successful		       .vboxclient-clipboard-tty2-service.pid
+.cache					     newc					  linx	     Videos				       Templates
+.viminfo				     .bash_logout				  Music      .					       .vboxclient-seamless-tty2-control.pid
+Public					     .config					  Pictures   .vboxclient-hostversion-tty2-control.pid  Desktop
+.vboxclient-draganddrop-tty2-control.pid     .bash_history				  .bashrc    .vboxclient-clipboard-tty2-control.pid    .local
+remark:
+Lists entries in the order they're stored in the directory, without sorting them.
+--------------------------------------------------------------
+6)ls -g:
+description:
+  -g     like -l, but do not list owner
+output:
+raakin@ubuntu-25:~$ ls -g
+total 44
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 raakin 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 raakin 4096 Aug 18 10:18 linx
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 raakin 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 raakin 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Public
+drwx------ 8 raakin 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Videos
+remark:
+Produces a long format listing (-l) but omits the file's owner.
+
+-----------------------------------------------------------------
+7)ls -h:
+description:
+ -h, --human-readable
+              with -l and -s, print sizes like 1K 234M 2G etc.
+output:
+raakin@ubuntu-25:~$ ls -h
+Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
+remark:
+When used with a long listing (-l), it prints file sizes in human-readable format (e.g., 1K, 234M, 2G).
+------------------------------------------------------------------
+8)ls -i:
+description:
+-i, --inode
+              print the index number of each file
+output:
+raakin@ubuntu-25:~$ ls -i
+1480371 Desktop  1480375 Documents  1480372 Downloads  1480657 linx  1480376 Music  1483040 newc  1480377 Pictures  1480374 Public  1480240 snap  1480373 Templates  1480378 Videos
+remark:
+Prints the inode index number to the left of each filename.
+
+-------------------------------------------------------------------
+9)ls -k:
+description:
+ -k, --kibibytes
+              default to 1024-byte blocks for file system usage; used only with -s and per directory totals
+output:
+raakin@ubuntu-25:~$ ls -k
+Desktop  Documents  Downloads  linx  Music  newc  Pictures  Public  snap  Templates  Videos
+remark:
+the ls -k command lists directory contents and shows file sizes in kilobytes.
+
+------------------------------------------------------------------
+10)ls -l
+description:
+-l     use a long listing format
+output:
+raakin@ubuntu-25:~$ ls -l
+total 44
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 raakin raakin 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 raakin raakin 4096 Aug 18 10:18 linx
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 raakin raakin 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 raakin raakin 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Public
+drwx------ 8 raakin raakin 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 raakin raakin 4096 Aug 17 14:51 Videos
+remark:
+s -l lists all files and directories in the current directory in a detailed, long format.
+--------------------------------------------------------------------
+11)ls -m:
+description:
+ -m     fill width with a comma separated list of entries
+output:
+raakin@ubuntu-25:~$ ls -m
+Desktop, Documents, Downloads, linx, Music, newc, Pictures, Public, snap, Templates, Videos
+remark:
+ls -m displays the contents of a directory in a single line, with each entry separated by a comma.
+---------------------------------------------------------------------
+12)ls -n:
+description:
+-n, --numeric-uid-gid
+              like -l, but list numeric user and group IDs
+output:
+raakin@ubuntu-25:~$ ls -n
+total 44
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 1000 1000 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 1000 1000 4096 Aug 18 10:18 linx
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 1000 1000 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 1000 1000 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Public
+drwx------ 8 1000 1000 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Videos
+remark:
+ls -n displays a long list of directory contents, but it uses the user and group ID numbers instead of their names.
+------------------------------------------------------------------------
+
+
