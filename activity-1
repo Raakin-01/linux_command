@@ -274,4 +274,256 @@ Templates  Videos
 remark:
 The command ls -x in Linux lists files and directories in a horizontal, comma-separated format across the terminal screen, filling each line before moving to the next one.
 
--------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+part -2 of the activity-1:
+explore the following commands:
+1)whoami:
+description:
+whoami - print effective user name
+output:
+raakin@ubuntu-25:~$ whoami
+raakin
+remarks:The whoami command in Linux outputs the username of the current user logged into the session, helping to identify the effective user running the command or script.
+
+-------------------------------------------------------------------
+2)pwd:
+description:
+   pwd - print name of current/working directory
+output:
+raakin@ubuntu-25:~$ pwd
+/home/raakin
+remarks:The pwd command in Linux stands for "print working directory" and it displays the absolute path of the current directory the user is working in, starting from the root directory (/)
+
+--------------------------------------------------------------------
+3)cd:
+output:
+raakin@ubuntu-25:~$ cd Pictures
+raakin@ubuntu-25:~/Pictures$ pwd
+/home/raakin/Pictures
+remarks:
+The cd command in Linux is used to change the current working directory to a specified directory; if used without any argument, it takes the user to their home directory.
+
+-------------------------------------------------------------------
+3)cd /:
+output:
+raakin@ubuntu-25:~$ cd Pictures
+raakin@ubuntu-25:~/Pictures$ cd /
+raakin@ubuntu-25:/$ 
+remark:
+The command cd / in Linux changes the current directory to the root directory, which is the top-level directory in the filesystem hierarchy.
+
+---------------------------------------------------------------------
+4)cd <space>:
+output:
+raakin@ubuntu-25:~$ cd Pictures
+raakin@ubuntu-25:~/Pictures$ cd 
+raakin@ubuntu-25:~$ 
+remark:
+ running cd alone or with no arguments will take the user to their home directory.
+
+---------------------------------------------------------------------
+5)cd <space> <path>
+output:
+raakin@ubuntu-25:~$ cd "Pictures"
+raakin@ubuntu-25:~/Pictures$ 
+remark:
+When using the cd command in Linux followed by a space and then a directory path (e.g., cd <space><path>), it changes the current directory to the given path.
+If the path contains spaces, it must be enclosed in quotes or have spaces escaped with a backslash (\) for the command to work correctly. 
+
+----------------------------------------------------------------------
+6)tree:
+output:
+raakin@ubuntu-25:~$ tree -l
+.
+├── Desktop
+├── Documents
+├── Downloads
+│   ├── im.jpeg
+│   └── Negus C. Linux Bible 10ed 2020Negus C. Linux Bible 10ed 2020.pdf
+├── linx
+│   ├── demo.sh
+│   └── sum.sh
+├── Music
+├── newc
+│   ├── a.out
+│   ├── hi.c
+│   └── prac.c
+├── Pictures
+│   └── im.jpeg
+├── Public
+├── snap
+│   ├── firefox
+│   │   ├── 6700
+│   │   ├── 6738
+│   │   ├── common
+│   │   └── current -> 6700  [recursive, not followed]
+│   ├── firmware-updater
+│   │   ├── 167
+│   │   ├── common
+│   │   └── current -> 167  [recursive, not followed]
+│   ├── prompting-client
+│   │   ├── 104
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── common
+│   │   └── current -> 104  [recursive, not followed]
+│   ├── snapd-desktop-integration
+│   │   ├── 253
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── 315
+│   │   │   ├── Desktop
+│   │   │   ├── Documents
+│   │   │   ├── Downloads
+│   │   │   ├── Music
+│   │   │   ├── Pictures
+│   │   │   ├── Public
+│   │   │   ├── Templates
+│   │   │   └── Videos
+│   │   ├── common
+│   │   └── current -> 315  [recursive, not followed]
+│   ├── snap-store
+│   │   ├── 1270
+│   │   ├── common
+│   │   └── current -> 1270  [recursive, not followed]
+│   └── terminal-parrot
+│       ├── 92
+│       ├── common
+│       └── current -> 92  [recursive, not followed]
+├── Templates
+└── Videos
+
+62 directories, 8 files
+remark:
+The tree command in Linux displays the directory structure in a visual, tree-like format that shows files and folders hierarchically, 
+making it easier to understand the organization of nested directories and their contents.
+It can be customized with options to include hidden files, limit depth, and show additional file details.
+----------------------------------------------------------------------------------------
+7)tree -l -L 1:
+output:
+raakin@ubuntu-25:~$ tree -l -L 1
+.
+├── Desktop
+├── Documents
+├── Downloads
+├── linx
+├── Music
+├── newc
+├── Pictures
+├── Public
+├── snap
+├── Templates
+└── Videos
+
+12 directories, 0 files
+remarks:
+The command tree -l -L 1 in Linux displays the directory structure of the current directory (or specified directory) with the following specifics:
+-l option: makes the command follow symbolic links as if they were directories.
+-L 1 option: limits the depth of the tree output to only one level, showing only the immediate contents (files and subdirectories) of the specified directory without recursing further into subdirectories.
+---------------------------------------------------------------------------------------------
+8)tree -l -L 2:
+output:
+raakin@ubuntu-25:~$ tree -l -L 2
+.
+├── Desktop
+├── Documents
+├── Downloads
+│   ├── im.jpeg
+│   └── Negus C. Linux Bible 10ed 2020Negus C. Linux Bible 10ed 2020.pdf
+├── linx
+│   ├── demo.sh
+│   └── sum.sh
+├── Music
+├── newc
+│   ├── a.out
+│   ├── hi.c
+│   └── prac.c
+├── Pictures
+│   └── im.jpeg
+├── Public
+├── snap
+│   ├── firefox
+│   ├── firmware-updater
+│   ├── prompting-client
+│   ├── snapd-desktop-integration
+│   ├── snap-store
+│   └── terminal-parrot
+├── Templates
+└── Videos
+
+18 directories, 8 files
+remark:
+The command tree -l -L 2 in Linux displays the directory structure with the following options:
+-l: Follows symbolic links as if they were directories.
+-L 2: Limits the display depth to two levels, showing the current directory, its immediate subdirectories, and their contents without further recursion.
+
+-----------------------------------------------------------------------------
+9)tree -l -L 3:
+output:
+aakin@ubuntu-25:~$ tree -l -L 3
+.
+├── Desktop
+├── Documents
+├── Downloads
+│   ├── im.jpeg
+│   └── Negus C. Linux Bible 10ed 2020Negus C. Linux Bible 10ed 2020.pdf
+├── linx
+│   ├── demo.sh
+│   └── sum.sh
+├── Music
+├── newc
+│   ├── a.out
+│   ├── hi.c
+│   └── prac.c
+├── Pictures
+│   └── im.jpeg
+├── Public
+├── snap
+│   ├── firefox
+│   │   ├── 6700
+│   │   ├── 6738
+│   │   ├── common
+│   │   └── current -> 6700  [recursive, not followed]
+│   ├── firmware-updater
+│   │   ├── 167
+│   │   ├── common
+│   │   └── current -> 167  [recursive, not followed]
+│   ├── prompting-client
+│   │   ├── 104
+│   │   ├── common
+│   │   └── current -> 104  [recursive, not followed]
+│   ├── snapd-desktop-integration
+│   │   ├── 253
+│   │   ├── 315
+│   │   ├── common
+│   │   └── current -> 315  [recursive, not followed]
+│   ├── snap-store
+│   │   ├── 1270
+│   │   ├── common
+│   │   └── current -> 1270  [recursive, not followed]
+│   └── terminal-parrot
+│       ├── 92
+│       ├── common
+│       └── current -> 92  [recursive, not followed]
+├── Templates
+└── Videos
+
+38 directories, 8 files
+
+remarks:
+The command tree -l -L 3 in Linux displays the directory structure up to a depth of three levels, following symbolic links as if they were directories, so it shows the current directory, 
+its subdirectories, their subdirectories, and their contents up to three levels deep,including any linked directories treated as real directories.
