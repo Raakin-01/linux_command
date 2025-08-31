@@ -527,3 +527,22 @@ aakin@ubuntu-25:~$ tree -l -L 3
 remarks:
 The command tree -l -L 3 in Linux displays the directory structure up to a depth of three levels, following symbolic links as if they were directories, so it shows the current directory, 
 its subdirectories, their subdirectories, and their contents up to three levels deep,including any linked directories treated as real directories.
+
+-----------------------------------------------------------------------------
+10)tree /var/log/apt -La 1 :
+output:
+raakin@ubuntu-25:~$ tree /var/log/apt -La 1
+/var/log/apt
+├── eipp.log.xz
+├── history.log
+└── term.log
+remarks:
+The command tree /var/log/apt -La 1 in Linux does the following:
+tree: Displays the directory structure in a tree-like format.
+/var/log/apt: Specifies the directory path to display.
+-L 1: Limits the display depth to 1, showing only the contents of the specified directory (no subdirectories recursively).
+-a: Includes all files, including hidden files (that start with a dot).
+-l: Follows symbolic links as if they were directories.
+
+---------------------------------------------------------------------------
+
