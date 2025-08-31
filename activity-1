@@ -161,5 +161,117 @@ drwxr-xr-x 2 1000 1000 4096 Aug 17 14:51 Videos
 remark:
 ls -n displays a long list of directory contents, but it uses the user and group ID numbers instead of their names.
 ------------------------------------------------------------------------
+13)ls -o:
+description:
+like -l, but do not list group information
+output:
+raakin@ubuntu-25:~$ ls -o
+total 44
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Desktop
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Documents
+drwxr-xr-x 2 raakin 4096 Aug 19 10:56 Downloads
+drwxrwxr-x 2 raakin 4096 Aug 28 09:00 linx
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Music
+drwxrwxr-x 2 raakin 4096 Aug 24 06:19 newc
+drwxr-xr-x 2 raakin 4096 Aug 18 10:27 Pictures
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Public
+drwx------ 8 raakin 4096 Aug 18 10:33 snap
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Templates
+drwxr-xr-x 2 raakin 4096 Aug 17 14:51 Videos
+remark:
+The command ls -o in Linux displays a detailed list of files while omitting the group ownership information from the output.
 
+-------------------------------------------------------------------------
+14) ls -p:
+descriprion:
+ -p, --indicator-style=slash
+              append / indicator to directories
+output:
+raakin@ubuntu-25:~$ ls -p
+Desktop/    Downloads/  Music/  Pictures/  snap/       Videos/
+Documents/  linx/       newc/   Public/    Templates/
+remark:
+The command ls -p in Linux lists files and directories, appending a forward slash / to directory names to distinguish them from files.
 
+-------------------------------------------------------------------------
+15)ls -q:
+description:
+ -q, --hide-control-chars
+              print ? instead of nongraphic characters
+output:
+raakin@ubuntu-25:~$ ls -q
+Desktop    Downloads  Music  Pictures  snap       Videos
+Documents  linx       newc   Public    Templates
+remarks:
+The command ls -q in Linux displays the contents of a directory, replacing non-printable characters in file names with question marks to ensure safe output.
+
+--------------------------------------------------------------------------
+16)ls -r:
+description:
+   -r, --reverse
+              reverse order while sorting
+output:
+raakin@ubuntu-25:~$ ls -r
+Videos     snap    Pictures  Music  Downloads  Desktop
+Templates  Public  newc      linx   Documents
+remarks:
+The command ls -r in Linux lists files and directories in reverse order, reversing the default sorting order, such as showing items from Z to A instead of A to Z.
+
+--------------------------------------------------------------------------
+17)ls -s:
+description:
+   -S     sort by file size, largest first
+
+output:
+raakin@ubuntu-25:~$ ls -s
+total 44
+4 Desktop    4 Downloads  4 Music  4 Pictures  4 snap       4 Videos
+4 Documents  4 linx       4 newc   4 Public    4 Templates
+remark:
+The command ls -s in Linux displays the size of each file in blocks alongside the file names when listing directory contents.
+
+--------------------------------------------------------------------------
+18)ls -t:
+description:
+  -t     sort by time, newest first; see --time
+output:
+raakin@ubuntu-25:~$ ls -t
+linx  Downloads  Pictures   Music   Videos     Desktop
+newc  snap       Documents  Public  Templates
+remark:
+The command ls -t in Linux sorts and lists files and directories by modification time, showing the newest files first.
+
+--------------------------------------------------------------------------
+19)ls -u:
+description:
+   -U     do not sort; list entries in directory order
+output:
+raakin@ubuntu-25:~$ ls -u
+Desktop    snap  Videos    newc   Documents  Public
+Templates  linx  Pictures  Music  Downloads
+remark:
+The command ls -u in Linux lists files and directories, sorting and displaying them by the last access time instead of the modification time.
+
+-------------------------------------------------------------------------
+20)ls -v:
+description:
+-v     natural sort of (version) numbers within text
+output:
+raakin@ubuntu-25:~$ ls -v
+Desktop    Downloads  Pictures  Templates  linx  snap
+Documents  Music      Public    Videos     newc
+remark:
+The command ls -v in Linux sorts and lists files in a natural version sort order, meaning it sorts numbers within filenames in a way that humans expect (e.g., file1, file2, file10) rather than simple ASCII sorting.
+
+--------------------------------------------------------------------------
+21)ls -x:
+description:
+  -x     list entries by lines instead of by columns
+output:
+raakin@ubuntu-25:~$ ls -x
+Desktop    Documents  Downloads  linx  Music  newc  Pictures  Public  snap
+Templates  Videos
+remark:
+The command ls -x in Linux lists files and directories in a horizontal, comma-separated format across the terminal screen, filling each line before moving to the next one.
+
+-------------------------------------------------------------------------
