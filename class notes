@@ -1,0 +1,23 @@
+root access:
+raakin@ubuntu-25:~$ sudo -i
+[sudo] password for raakin: 
+root@ubuntu-25:~# ca
+
+date:
+root@ubuntu-25:~# sudo date --set="2025-09-03 10:05:59.990"
+Wed Sep  3 10:05:59 AM UTC 2025
+
+
+add new user:
+raakin@ubuntu-25:~$ sudo useradd hi
+[sudo] password for raakin: 
+
+
+You can verify the user was created and view its details using the id command: 
+raakin@ubuntu-25:~$ id hi
+uid=1001(hi) gid=1001(hi) groups=1001(hi)
+
+
+to change permision of the file:
+raakin@ubuntu-25:~$ chmod u+rwx  linx
+
