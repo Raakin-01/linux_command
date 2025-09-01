@@ -21,3 +21,6 @@ uid=1001(hi) gid=1001(hi) groups=1001(hi)
 to change permision of the file:
 raakin@ubuntu-25:~$ chmod u+rwx  linx
 
+to shutdown:
+shutdown -h
+
